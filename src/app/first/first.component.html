@@ -1,0 +1,18 @@
+<p>first works!</p>
+<input type="text" #txtname placeholder="Enter name">
+<button (click)="getDataInput(txtname)">Get Data</button>
+<h4>    {{name}}    </h4>
+<h4>    {{txtname.value}}    </h4>
+<br>
+<input #txtAge placeholder="Enter age" (keyup)="getData(txtAge)">
+<p>{{txtAge.value}}</p>
+<br>
+<input type="text" #txtSchool placeholder="Enter School" [(ngModel)]="txtSchool">
+<p>{{txtSchool}}</p>
+<ol type="A">
+    <li *ngFor="let item of arrNumber">{{ item }}</li>
+</ol>
+<p>{{arrNumber}}</p>
+<hr>
+<!-- load ra một mảng, số nào điều kiện đúng thì số màu đỏ, số nào sai thì màu xanh
+number >= 10 ? color red : color blue -->
